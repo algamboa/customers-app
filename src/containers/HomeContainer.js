@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import AppFrame from '../components/AppFrame';
+import AppFrame from './../components/AppFrame';
 import CustomersActions from './../components/CustomersActions';
+import { withRouter } from 'react-router-dom';
 
 class HomeContainer extends Component {
     handlerOnClick = () => {
         console.log("Handler on click");
+        this.props.history.push("/customers");
     }
     render() {
         return(
             <div>
-                <AppFrame header='Home'
+                <AppFrame
+                    header='Home'
                     body={
                         <div>
                             Esta es la pantalla inicial
@@ -28,4 +31,4 @@ HomeContainer.propTypes = {
     
 };
 
-export default HomeContainer;
+export default withRouter(HomeContainer);

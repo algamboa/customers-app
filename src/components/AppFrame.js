@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppHeader from './AppHeader';
 
-const AppFrame = (header, body, footer) => {
+const AppFrame = ({header, body, footer}) => {
     return (
         <div>
             <div className="app-frame">
